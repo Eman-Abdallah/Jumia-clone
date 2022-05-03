@@ -1,0 +1,142 @@
+<section>
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="row">
+        <div class="col-md-8 bg-white box p-3">
+<div class="row justify-content-between">
+  <div class="col-md-4">
+    <img src={{product.imagePath}} height="300px" alt="">
+    <hr>
+    <h6>SHARE THIS PRODUCT</h6>
+    <div class="d-flex">
+      <i class="fab fa-facebook fa-3x mx-2"></i>
+      <i class="fab fa-twitter fa-3x"></i>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="d-flex">
+      <h6>{{product.name}}</h6>
+      <button class="btn change"
+      [style.color]=" clicked ? '#ffc107' : 'black' "
+       (click)="save()"><i class="fas fa-heart"></i></button>
+
+    </div>
+    <p>Brand: {{product.brand}}</p>
+ <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+<hr>
+<h2>EGP {{product.price-(product.price*product.sale/100)}}.00 </h2>
+<p>EGP{{product.price}}.00
+  <span class="text-warning p-1" style=" background-color: rgb(255, 243, 227);">- {{product.sale}}%</span>
+  </p>
+  <span>+ shipping from EGP 10.83 to 6th of October</span>
+  <div class="d-grid">
+    <button class="btn btn-warning text-white" (click)="addToCart()">
+      <i class="fas fa-solid fa-cart-arrow-down fa-x"></i>
+      Add To Cort</button>
+  </div>
+  <hr>
+  <h4>
+    PROMOTIONS
+  </h4>
+  <div class="d-flex">
+    <i class="fas fa-crown fa-2x mx-1 text-warning"></i>
+    <a > <span>Get Free Delivery In Your Next Order With Jumia Primo</span> </a>
+  </div>
+  <div class="d-flex">
+    <i class="fas fa-star fa-2x mx-1 text-warning"></i>
+    <a > <span>Enjoy instalment from 6 months to 60 months</span> </a>
+  </div>
+
+  </div>
+</div>
+        </div>
+
+
+        <div class="col-md-3 box mx-3 p-3">
+          <h6>DELIVERY & RETURNS</h6>
+          <hr>
+          <img src="/assets/image/j-express.png" height="20px" class="img-resopnsive" alt="">
+          <p>Order from Jumia Express items and get free shipping. Details</p>
+          <hr>
+          <h6>Choose your location</h6>
+          <form >
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="country">
+              <option value="Giza">Giza</option>
+              <option value="Cairo">Cairo</option>
+              <option value="Alexandria">Alexandria</option>
+              <option value="Aswan">Aswan</option>
+              <option value="Luxor">Luxor</option>
+              <option value="Port-Said">Port-Said</option>
+              <option value="Damitta">Damitta</option>
+              <option value="El-Esmalia">Esmalia</option>
+              <option value="El-Behira">El-Behira</option>
+              <option value="El-Aliobia">El-Aliobia</option>
+              <option value="Synaa">Synaa</option>
+              <option value="El-Daahlia">El-Daahlia</option>
+            </select>
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="country">
+              <option value="Cairo">6th of October</option>
+              <option value="Alexandria">Alexandria</option>
+              <option value="Aswan">Aswan</option>
+              <option value="Luxor">Luxor</option>
+              <option value="Port-Said">Port-Said</option>
+              <option value="Damitta">Damitta</option>
+              <option value="El-Esmalia">Esmalia</option>
+              <option value="El-Behira">El-Behira</option>
+              <option value="El-Aliobia">El-Aliobia</option>
+              <option value="Synaa">Synaa</option>
+              <option value="El-Daahlia">Aruba</option>
+            </select>
+          </form>
+          <div class="d-flex">
+            <img src="/assets/image/help-with-my-orders1.png" height="40px" alt="">
+            <div class="text mx-2">
+              <h6>
+                Door Delivery
+              </h6>
+              <p>Delivery EGP 22.23
+              <p>Delivery by 22 March when you order within next 2hrs 52mins</p>
+
+
+            </div>
+          </div>
+          <div class="d-flex">
+            <img src="/assets/image/returns---refunds.png" height="40px" alt="">
+            <div class="text mx-2">
+              <h6>
+                Delivery EGP 10.83
+              </h6>
+              <p>Ready for pickup between 22 March & 31 March when you order within next 2hrs 52mins</p>
+              <p>Delivery by 22 March when you order within next 2hrs 52mins</p>
+
+
+            </div>
+          </div>
+          <hr>
+          <div class="d-flex">
+            <img src="/assets/image/returns---refunds.png" height="40px" alt="">
+            <div class="text mx-2">
+              <h6>
+                Return Policy
+              </h6>
+              <p>14 days free return (except for underwear and personal items) up to 30 days for defective products with necessity for requesting a return within 24 hours from the delivery date.See more</p>
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 bg-white box my-3 p-3">
+          <h3>Product Discreption</h3>
+          <p>{{product.desc}}</p>
+        </div>
+        </div>
+    </div>
+  </div>
+</section>

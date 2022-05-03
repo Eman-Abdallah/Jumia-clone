@@ -1,0 +1,25 @@
+nav {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  width: 100%;
+}
+a{
+  list-style: none;
+  cursor: pointer;
+}
+.box{
+  border-radius: 5%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  width: 200px;
+}
+
+nav input{
+  width: 600px;
+}
+
+@media (min-width: 576px) {
+  nav li{
+    text-align: center;
+    margin: auto;
+  }
+
+ }

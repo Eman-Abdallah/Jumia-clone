@@ -1,0 +1,20 @@
+h6{
+  font-size: 15px;
+}
+
+p{
+  font-size: 12px;
+}
+a{
+  font-size: 12px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+  color: #ffc107;
+}
+i:hover{
+  color: #ffc107;
+}

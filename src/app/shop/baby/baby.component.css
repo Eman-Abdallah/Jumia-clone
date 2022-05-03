@@ -1,0 +1,12 @@
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
+a:hover{
+  color: #ffc107;
+}
+.box{
+  border-radius: 5%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}

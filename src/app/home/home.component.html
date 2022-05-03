@@ -1,0 +1,460 @@
+<section class="bg-light m-2 ">
+
+    <div class="row justify-content-center">
+      <div class="col-xs-8 bg-light ">
+    <div class="row justify-content-center ">
+      <div class="col-md-2 d-none d-lg-block ">
+        <div class="list-group box">
+          <a routerLink="superMarket"  routerLinkActive="active" (click)="onClick()"><i class="fas fa-salad"></i>
+            Subermarket</a>
+          <a routerLink="fashion" (click)="onClick()"  ><i class="fas fa-watch"></i>
+            Fashion</a>
+            <a routerLink="health" (click)="onClick()" ><i class="fa fa-heart"></i>
+            Health & Beauty</a>
+            <a routerLink="baby" (click)="onClick()"><i class="fas fa-baby-carriage"></i>
+            Baby Product</a>
+            <a routerLink="mobile" (click)="onClick()" ><i class="fas fa-mobile-android-alt"></i>
+           Phones & tablets</a>
+           <a routerLink="office" (click)="onClick()"><i class="fas fa-home-alt"></i>
+            Home & Office</a>
+            <a routerLink="electronics" (click)="onClick()"><i class="fa fa-air-freshener"></i>
+            Electronics</a>
+            <a routerLink="computer" (click)="onClick()"><i class="fas fa-laptop"></i>
+           Computing</a>
+          <a routerLink="sport" (click)="onClick()"> <i class="fas fa-ball-pile"></i>
+           Sporting Goods</a>
+
+          <a routerLink="game" (click)="onClick()"><i class="fa fa-gamepad"></i>
+           Gaming</a>
+          <a routerLink="car" (click)="onClick()"><i class="fas fa-car"></i>    Outomobile</a>
+          <a routerLink="other" (click)="onClick()"><i class="fas fa-circle-notch"></i>
+          Other Categories</a>
+        </div>
+      </div>
+      <div class="col-md-7 mr-0">
+        <router-outlet *ngIf="isClicked" ></router-outlet>
+        <ngb-carousel *ngIf="!isClicked" #carousel [interval]="1200"  >
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img src="/assets/image/Slider-Desktop-EN_-(27).jpg" alt="Random first slide" class="img-fluid" >
+            </div>
+
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img src="/assets/image/Nivea-_Slider-Desktop-EN.jpg" alt="Random first slide" class="img-fluid">
+            </div>
+
+
+
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img src="/assets/image/Fresh-_Slider-Desktop-EN.jpg" alt="Random first slide" class="img-fluid">
+            </div>
+
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img src="/assets/image/Slider-Desktop-EN__copy_3-(1).jpg" alt="Random first slide" class="img-fluid">
+            </div>
+
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img src="/assets/image/Slider-Desktop-EN_-(28).jpg" alt="Random first slide" class="img-fluid">
+            </div>
+
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img src="/assets/image/Slider-Desktop-EN__copy-(4).jpg" alt="Random first slide" class="img-fluid">
+            </div>
+
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img src="/assets/image/Slider-Desktop-EN_-(3).jpg" alt="Random first slide" class="img-fluid">
+            </div>
+
+          </ng-template>
+        </ngb-carousel>
+      </div>
+      <div class="col-md-3">
+        <img src="/assets/image/EN.png" alt="Random first slide" class="my-1 img-fluid" style="height: 180px;">
+        <img src="/assets/image/AR_copy_3-(1).png" alt="Random first slide" class="img-fluid"  style="height: 180px;">
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+</section>
+
+
+    <div class="row m-2 justify-content-around ">
+      <div class="col-md-2 p-2 card text-center">
+        <h5>
+<img src="/assets/image/72-723694_free-shipping-png-free-shipping-icon-free-shipping.png" style="height: 40px;" alt="">
+          Free Shipping</h5>
+      </div>
+      <div class="col-md-3 p-2 card text-center">
+        <h5>
+          <img src="/assets/image/mothers-day-badge-icon-mothers-day-icon-115520535690ucdxetfvx.png" style="height: 40px;" alt="">
+          Mother Day Offer</h5>
+      </div>
+      <div class="col-md-2 p-2 card text-center">
+        <h5><img src="/assets/image/7138651.png" style="height: 40px;" alt="">
+          Recharge & Bill</h5>
+      </div>
+      <div class="col-md-2 p-2 card text-center">
+        <h5><img src="/assets/image/11-115685_gift-icon-gift-icon-png.png" style="height: 40px;" alt="">
+          Orange Points</h5>
+      </div>
+    </div>
+
+
+
+<section class="my-2">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-xs-8 card p-2">
+    <img src="/assets/image/Jumia_Express_-1152x252_-EN-(4).jpg" class="img-fluid  "  alt="">
+  </div>
+  </div>
+  </div>
+</section>
+
+
+<section class="bg-light py-3">
+
+<div class="container-fluid">
+  <header class="d-flex justify-content-between bg-danger text-white  p-2 mb-3">
+    <h3>Flash Sales Every Day</h3>
+    <h3>Time Left 00h :00m :00s</h3>
+   <a href="#" class="text-white nav-link fw-bold ">SEE ALL</a>
+  </header>
+
+  <div class="content bg-white row justify-content-center  p-3">
+
+    <div class="col-md-2" *ngFor="let flashSale of flashSaleProduct; let i=index "
+
+  >
+    <a class="card" style="width: 13rem;"  [routerLink]="[flashSale.id-1]" routerLinkActive="active"
+    (click)="viewed()"   >
+        <img src={{flashSale.imagePath}} style="height: 200px;" class="card-img-top" alt="...">
+        <div class="card-body px-3">
+
+          <h5 class="card-title ">{{flashSale.name}} </h5>
+
+            <p class="card-text">EGP{{flashSale.price-(flashSale.price*flashSale.sale/100)}}    <br>
+            <span class="card-text" style="text-decoration: line-through;">EGP{{flashSale.price}} </span>
+          </p>
+
+          <span>{{flashSale.amontLeft}} Item Left</span>
+
+        </div>
+      </a>
+    </div>
+
+
+  </div>
+</div>
+<div class="container-fluid">
+  <header class="text-center  text-white p-2 my-3">
+    <h3>AMAZING DEALS</h3>
+
+  </header>
+  <div class="content bg-white p-3">
+<div class="row m-2">
+  <div class="col-md-6 ">
+<img src="/assets/image/Andora-_Floor-Desktop_-EN-(1).jpg" class="card img-fluid" alt="">
+  </div>
+  <div class="col-md-6 ">
+    <img src="/assets/image/Dove_2-_Floor-Desktop_-EN_copy_6-(1).jpg"class="card img-fluid"  alt="">
+  </div>
+
+
+</div>
+  </div>
+  <div class="content bg-white my-3 p-2">
+<div class="row m-2">
+  <div class="col-md-6 ">
+<img src="/assets/image/KADY-_Floor-Desktop_-EN_copy_2-(1).jpg" class="card img-fluid" alt="">
+  </div>
+  <div class="col-md-6 ">
+    <img src="/assets/image/Generic-_Floor-Desktop_-EN.jpg"class="card img-fluid"  alt="">
+  </div>
+
+
+</div>
+  </div>
+</div>
+</section>
+<section>
+<div class="container-fluid">
+  <header class="  text-white p-2 my-3">
+    <h3>MOTHER DAY | TOP DEALS</h3>
+
+  </header>
+  <div class="content bg-white">
+<div class="row justify-content-between p-3">
+  <div class="col-md-2" *ngFor="let motherDayP of mDaySaleProduct ; let i=index"
+  product= "motherDayP"
+ >
+  <a class="card" style="width: 13rem;" [routerLink]="[motherDayP.id-1]" routerLinkActive="active"routerLinkActive="active">
+    <img src={{motherDayP.imagePath}} style="height: 200px;" class="card-img-top" alt="...">
+    <div class="card-body px-3">
+      <h5 class="card-title "> {{motherDayP.name}}</h5>
+      <p class="card-text"> >EGP {{motherDayP.price-(motherDayP.price*motherDayP.sale/100)}}.00  <br>
+        <span class="card-text" style="text-decoration: line-through;">EGP {{motherDayP.price}}.00</span>
+      </p>
+
+    </div>
+    </a>
+  </div>
+
+
+
+</div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <header class="text-center  text-white p-2 my-3 ">
+    <h3>MORE DEALS FOR YOU</h3>
+
+  </header>
+  <div class="content bg-white p-2">
+    <div class="row m-2">
+      <div class="col-md-6 ">
+    <img src="/assets/image/KADY-_Floor-Desktop_-EN_copy_5.jpg" class="card img-fluid" alt="">
+      </div>
+      <div class="col-md-6 ">
+        <img src="/assets/image/KADY-_Floor-Desktop_-EN_copy_6.jpg"class="card img-fluid"  alt="">
+      </div>
+
+
+    </div>
+      </div>
+      <div class="content bg-white my-3 p-2">
+    <div class="row m-2">
+      <div class="col-md-6 ">
+    <img src="/assets/image/KADY-_Floor-Desktop_-EN_copy_9.jpg" class="card img-fluid" alt="">
+      </div>
+      <div class="col-md-6 ">
+        <img src="/assets/image/KADY-_Floor-Desktop_-EN_copy_4.jpg"class="card img-fluid"  alt="">
+      </div>
+
+
+    </div>
+      </div>
+</div>
+
+<div class="container-fluid">
+  <header class="  text-white p-2 my-3">
+    <h3>Baeuty & Perfumes | UP TO 60% OFF</h3>
+
+  </header>
+  <div class="content bg-white">
+    <div class="row justify-content-between  m-2">
+      <div class="col-md-2" *ngFor="let bProduct of baeutyProduct;let i=index"
+      product= "bProduct"
+   >
+      <a class="card" style="width: 13rem;" routerLink="/{{bProduct.id-1}}" routerLinkActive="active"routerLinkActive="active">
+        <img src={{bProduct.imagePath}} style="height: 200px;" class="card-img-top" alt="...">
+
+        <div class="card-body px-3">
+          <h5 class="card-title ">{{bProduct.name}} </h5>
+          <p class="card-text"> EGP {{bProduct.price-(bProduct.price*bProduct.sale/100)}}<br>
+            <span class="card-text" style="text-decoration: line-through;"> EGP {{bProduct.price}}
+            </span>
+          </p>
+        </div>
+      </a>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <header class="  text-white text-center p-2 my-3">
+    <h3>OFFERS FOR ONE DAY ONLY!</h3>
+
+  </header>
+  <div class="col-xs-8 card ">
+    <img src="/assets/image/1152x252_-EN-(11).jpg" class="img-fluid mx-5 "  alt="">
+  </div>
+ </div>
+ <div class="container-fluid">
+  <header class="  text-white text-center p-2 my-3">
+    <h3>OFFERS FOR ONE DAY ONLY!</h3>
+
+  </header>
+  <div class="row">
+  <div class="col-md-2">
+    <div class="card">
+      <img src="/assets/image/Women_Fashion_-_260x144_AR.png" alt="">
+      <div class="card-body">
+        <h5 class="card-text">Women Fashion</h5>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="card">
+      <img src="/assets/image/Sports_&_Fitness_-_260x144_AR.png" alt="">
+      <div class="card-body">
+        <h5 class="card-text">Sports & Fitness</h5>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="card">
+      <img src="/assets/image/TVs,_Gaming_&_Electronics_-_260x144EN.png" alt="">
+      <div class="card-body">
+        <h5 class="card-text">TVs, Gaming & Electronics</h5>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="card">
+      <img src="/assets/image/Laptops_&_accessories_-_260x144_AR.png" alt="">
+      <div class="card-body">
+        <h5 class="card-text">Laptops & accessories</h5>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="card">
+      <img src="/assets/image/Kids_&_Baby_-_260x144__AR.png" alt="">
+      <div class="card-body">
+        <h5 class="card-text">Kids & Baby</h5>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="card">
+      <img src="/assets/image/Household_Care-_260x144_EN.png" alt="">
+      <div class="card-body">
+        <h5 class="card-text">Household Care</h5>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-md-2">
+    <div class="card">
+      <img src="/assets/image/Food_&_Beverage-_260x144_EN.png" alt="">
+      <div class="card-body">
+        <h5 class="card-text">Food & Beverage</h5>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="card">
+      <img src="/assets/image/Car_Essentials_-_260x144EN.png" alt="">
+      <div class="card-body">
+        <h5 class="card-text">Car Essentials</h5>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="card">
+      <img src="/assets/image/Beauty_&_Perfumes_-_260x144_AR.png" alt="">
+      <div class="card-body">
+        <h5 class="card-text">Beauty & Perfumes</h5>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="card">
+      <img src="/assets/image/Mobiles_&_Accessories_-_260x144_EN.png" alt="">
+      <div class="card-body">
+        <h5 class="card-text">Mobiles & Accessories</h5>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="card">
+      <img src="/assets/image/Home_&_Appliances_-_260x144_AR.png" alt="">
+      <div class="card-body">
+        <h5 class="card-text">Home & Appliances</h5>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-md-2">
+    <div class="card">
+      <img src="/assets/image/men_fashion__260x144_EN_copy.png" alt="">
+      <div class="card-body">
+        <h5 class="card-text">men fashion</h5>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+  <div class="container-fluid">
+    <header class="  text-white p-2 my-3">
+      <h3>Top selling items</h3>
+
+    </header>
+    <div class="content bg-white ">
+      <div class="row justify-content-between  m-2">
+        <div class="col-md-2" *ngFor="let topProduct of topProduct;let i=index"
+        product= "bProduct"
+     >
+        <a class="card" style="width: 10rem;" [routerLink]="[topProduct.id-1]" routerLinkActive="active"routerLinkActive="active">
+          <img src={{topProduct.imagePath}} style="height: 200px;" class="card-img-top" alt="...">
+
+          <div class="card-body px-3">
+            <h5 class="card-title ">{{topProduct.name}} </h5>
+            <p class="card-text"> EGP {{topProduct.price-(topProduct.price*topProduct.sale/100)}}.00<br>
+              <span class="card-text" style="text-decoration: line-through;"> EGP {{topProduct.price}}.00
+              </span>
+            </p>
+          </div>
+        </a>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+ </div>
+ <div class="container-fluid">
+  <header class="text-center  text-white p-2 my-3 ">
+    <h3>MORE DEALS & OFFERS</h3>
+
+  </header>
+  <div class="content bg-white p-2">
+    <div class="row m-2">
+      <div class="col-md-6 ">
+    <img src="/assets/image/floor_desktop_-EN_-(4).jpg" class="card img-fluid" alt="">
+      </div>
+      <div class="col-md-6 ">
+        <img src="/assets/image/Floor-Desktop_-(12).jpg"class="card img-fluid"  alt="">
+      </div>
+
+
+    </div>
+      </div>
+
+</div>
+</section>
+
+

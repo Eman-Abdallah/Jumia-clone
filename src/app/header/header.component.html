@@ -1,0 +1,129 @@
+<div class="bg-warning  "><img src="/assets/image/Artboard_1-(1).jpg" class="img-responsive  "  alt=""></div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light  p-0 position-sticky" style="z-index: 2 ;top: 0px;">
+
+
+    <div class="container-fluid">
+
+      <button type="button" class="btn btn-outline-primary d-lg-none d-sm-block" (click)="collapse.toggle()" [attr.aria-expanded]="isCollapsed"
+      aria-controls="collapseExample">
+
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    <a class="navbar-brand" routerLink="" routerLinkActive="active"><img src="/assets/image/jumialogo_489385_crop.jpg" class="img-responsive py-0"
+ alt="" style="height: 70px;"></a>
+
+ <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+      <ul class="navbar-nav me-auto  mb-2 mb-lg-0">
+        <form class="d-flex">
+          <input class="form-control "  type="search" placeholder="Search" aria-label="Search" placeholder="
+          Search Products, Brands And Categories" >
+          <button class="btn btn-warning mx-2"  type="submit">Search</button>
+        </form>
+
+        <li class="nav-item ">
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn btn-secondary mx-2" id="dropdownBasic1" ngbDropdownToggle>
+              <i class=" fas fa-regular fa-user"></i>
+              {{isAuthenticated ?  'Hi, ' : ''}}
+          {{isAuthenticated ?  name : 'Account'}}
+            </button>
+
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="p-2">
+              <a class="btn btn-warning px-4 mx-2 text-white"
+               routerLink="sign" *ngIf="!isAuthenticated"
+               routerLinkActive="active" > SIGN IN
+              </a>
+
+
+              <a ngbDropdownItem *ngIf="isAuthenticated" routerLink="my-account" routerLinkActive="active"   >
+                <i class=" fas fa-regular fa-user mr-3" ></i>
+                My Account</a>
+              <a ngbDropdownItem *ngIf="isAuthenticated"  routerLink="my-account/order" routerLinkActive="active"  >
+                <i class="fas fa-regular fa-store mr-3"></i>
+               Orders</a>
+              <button ngbDropdownItem *ngIf="isAuthenticated"  routerLink="my-account/save" routerLinkActive="active" >
+                <i class=" fas fa-regular fa-heart mr-3 "></i>
+                saved Items</button>
+             
+            </div>
+          </div>
+
+        </li>
+        <li class="nav-item " >
+          <div ngbDropdown class="d-inline-block">
+            <button class="btn fw-bold mx-2 text-dark " id="dropdownBasic1" ngbDropdownToggle  >
+              <i class="fas fa-solid fa-question"></i>
+              Help</button>
+
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="p-2">
+              <a ngbDropdownItem routerLink="help" routerLinkActive="active" >
+                Help Center </a>
+           <button ngbDropdownItem>
+               Place & Track Order</button>
+              <button ngbDropdownItem>
+                Order Cancellation</button>
+              <button ngbDropdownItem>
+               Returns & Refunds</button>
+              <button ngbDropdownItem>
+               Payment& Jumia Account</button>
+                <hr>
+                <button class="btn btn-warning px-4 ml-3 text-white mx-4"  >
+                  <i class="fas fa-solid fa-comment-dots mx-2"></i>
+                  Live Help</button>
+            </div>
+          </div>
+
+        </li>
+        <li class="nav-item" id="yellow">
+          <a class="nav-link mx-2 fw-bold text-dark " *ngIf="isAuthenticated"
+          style="cursor: pointer;" routerLink="cart" routerLinkActive="" >
+            <i class="fas fa-solid fa-cart-arrow-down fa-x"></i>
+            Cart</a>
+        </li>
+      </ul>
+
+    </div>
+    </div>
+
+</nav>
+<div class="">
+  <div class=" box m-2">
+    <div #collapse="ngbCollapse" [(ngbCollapse)]="!isCollapsed">
+
+      <ul class="list-group box  p-2">
+        <a routerLink="superMarket"><i class="fas fa-salad"></i>
+          Subermarket</a>
+        <a class=""><i class="fas fa-watch"></i>
+          Fashion</a>
+        <a class=""><i class="fa fa-heart"></i>
+          Health & Beauty</a>
+        <a class=""><i class="fas fa-baby-carriage"></i>
+          Baby Product</a>
+        <a class=""><i class="fas fa-mobile-android-alt"></i>
+         Phones & tablets</a>
+        <a class=""><i class="fas fa-home-alt"></i>
+          Home & Office</a>
+        <a class=""><i class="fa fa-air-freshener"></i>
+          Electronics</a>
+        <a class=""><i class="fas fa-laptop"></i>
+         Computing</a>
+        <a class=""> <i class="fas fa-ball-pile"></i>
+         Sporting Goods</a>
+
+        <a class=""><i class="fa fa-gamepad"></i>
+         Gaming</a>
+        <a class=""><i class="fas fa-car"></i>    Outomobile</a>
+        <a class=""><i class="fas fa-circle-notch"></i>
+        Other Categories</a>
+      </ul>
+
+  </div>
+</div>
+
+</div>

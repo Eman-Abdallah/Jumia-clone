@@ -1,0 +1,186 @@
+<section>
+  <div class="row justify-content-center">
+    <div class="col-md-11 align-content-center">
+      <div class="row justify-content-center box "  *ngIf="cortNumber===0">
+
+          <div class="col-md-3" >
+            <img src="/assets/image/Profilelogo-3.png" height="200px" width="200px" class="" alt="">
+          </div>
+          <div class="text-center">
+            <h4>Your cart is empty!</h4>
+            <p>Browse our categories and discover our best deals!</p>
+            <a class="btn btn-warning btn-lg my-3" routerLink="">Start Shopping</a>
+          </div>
+        </div>
+<div  *ngIf="cortNumber!==0">
+
+<h3>Cart({{cortNumber}})</h3>
+<hr>
+<div class="box p-2"  *ngFor="let cart of cartProducts; let i=index">
+  <div class="d-flex justify-content-between  my-2 p-2" >
+    <div>
+      <img src={{cart.imagePath}} height="60px" alt="">
+      {{cart.name}}
+    </div>
+
+    <p class="card-text">{{cart.price-(cart.price*cart.sale/100)}}.00 <br>
+      <span class="card-text" style="text-decoration: line-through;">EGP  {{cart.price}}.00</span>
+      <span class="text-warning p-1" style=" background-color: rgb(255, 243, 227);">- {{cart.sale}}%</span>
+    </p>
+  </div>
+  <button class="btn btn-warning" (click)="remove(i)" type="button">
+    <i class="fas fa-remove"></i>
+    Remove</button>
+</div>
+
+
+
+</div>
+
+
+    </div>
+  </div>
+
+  <div class="row justify-content-center my-2">
+    <div class="col-md-11 align-content-center">
+      <div class="row  box p-2 ">
+         <h3 class="p-3">Saved Items ({{number}})</h3>
+
+
+         <div class="col-md-2" *ngFor="let product of SavedProducts;let i=index ">
+          <a class="card mx-1" style="width:11rem;"  routerLink="../{{product.id-1}}" routerLinkActive="active"routerLinkActive="active">
+            <img src="{{product.imagePath}}" style="height: 200px;" class="card-img-top" alt="...">
+            <div class="card-body px-3">
+
+              <h5 class="card-title ">{{product.name}} </h5>
+
+                <p class="card-text">EGP EGP {{product.price-(product.price*product.sale/100)}}.00 <br>
+                <span class="card-text" style="text-decoration: line-through;">EGP {{product.price-(product.price*product.sale/100)}}.00</span>
+              </p>
+              <div class="progress">
+                <div class="progress-bar bg-warning w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <span>100 Item Left</span>
+
+            </div>
+          </a>
+        </div>
+        </div>
+
+        <div class="content bg-white my-3 box py-2">
+          <div class="row justify-content-between  m-2">
+            <h4>Recently Viewed</h4>
+
+            <div class="col-md-2">
+            <div class="card" style="width: 11rem;">
+              <img src="/assets/image/f (1).jpg" style="height: 200px;" class="card-img-top" alt="...">
+              <div class="card-body px-3">
+                <h5 class="card-title ">SHARE THIS PRODUCT
+
+
+                  Dr Rashell Radiance & Anti Aging 24K Gold Under Eye Serum 30ml</h5>
+                <p class="card-text">EGP 101.20 <br>
+                  <span class="card-text" style="text-decoration: line-through;">EGP 255.00
+                  </span>
+                </p>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-2">
+            <div class="card" style="width: 11rem;">
+              <img src="/assets/image/d(4).jpg" style="height: 200px;" class="card-img-top" alt="...">
+              <div class="card-body px-3">
+                <h5 class="card-title ">Bourjois Rouge Edition Velvet Lipstick - 09 Happy Nude Year </h5>
+                <p class="card-text">EGP 112.00 <br>
+                  <span class="card-text" style="text-decoration: line-through;">EGP 300.00
+                  </span>
+                </p>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-2">
+            <div class="card" style="width: 11rem;">
+              <img src="/assets/image/d(5).jpg" style="height: 200px;" class="card-img-top" alt="...">
+              <div class="card-body px-3">
+                <h5 class="card-title "> Vaseline Intensive Care - Healthy Hand And Stronger Nails - 75ml</h5>
+                <p class="card-text">EGP 75.00 <br>
+                  <span class="card-text" style="text-decoration: line-through;">EGP 199.00
+                  </span>
+                </p>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-2">
+
+
+            <div class="card" style="width: 11rem;">
+              <img src="/assets/image/d(3).jpg" style="height: 200px;" class="card-img-top" alt="...">
+              <div class="card-body px-3">
+                <h5 class="card-title ">Inglot AMC - Eyeliner Gel - 77</h5>
+                <p class="card-text">EGP 215.00 <br>
+                  <span class="card-text" style="text-decoration: line-through;">EGP 666.00
+                  </span>
+                </p>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-2">
+
+
+            <div class="card" style="width: 11rem;">
+              <img src="/assets/image/1 (6).jpg" style="height: 200px;" class="card-img-top" alt="...">
+              <div class="card-body px-3">
+                <h5 class="card-title ">SHARE THIS PRODUCT
+
+
+                  Dr Rashell Day Cream - Vitamin C Brightening & Anti-Aging Cream 50G</h5>
+                <p class="card-text">EGP 105.00 <br>
+                  <span class="card-text" style="text-decoration: line-through;">EGP 299.00
+                  </span>
+                </p>
+              </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div class="container-fluid">
+              <header class="  text-white p-2 my-3">
+                <h3>Top selling items</h3>
+
+              </header>
+              <div class="content bg-white box">
+                <div class="row justify-content-between  m-2">
+                  <div class="col-md-2" *ngFor="let topProduct of topProducts;let i=index"
+                  product= "bProduct"
+               >
+                  <a class="card" style="width: 10rem;" [routerLink]="[topProduct.id-1]" routerLinkActive="active"routerLinkActive="active">
+                    <img src={{topProduct.imagePath}} style="height: 200px;" class="card-img-top" alt="...">
+
+                    <div class="card-body px-3">
+                      <h5 class="card-title ">{{topProduct.name}} </h5>
+                      <p class="card-text"> EGP {{topProduct.price-(topProduct.price*topProduct.sale/100)}}.00<br>
+                        <span class="card-text" style="text-decoration: line-through;"> EGP {{topProduct.price}}.00
+                        </span>
+                      </p>
+                    </div>
+                  </a>
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+            </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</section>

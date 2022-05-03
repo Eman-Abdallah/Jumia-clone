@@ -1,0 +1,39 @@
+.box{
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+header
+{
+  border-radius: 10px;
+  background-color: rgb(243, 210, 166);
+}
+a{
+list-style: none;
+text-decoration: none;
+color: black;
+padding: 4px;
+cursor: pointer;
+}
+.box a:hover{
+  color: #ffc107;
+}
+.card {
+  border: none !important;
+
+
+  background: #fff;
+
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+h5{
+  font-size: 15px;
+}

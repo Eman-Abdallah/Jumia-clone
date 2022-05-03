@@ -1,0 +1,64 @@
+<section>
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="row my-2">
+        <div class="col-md-3 card">
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action "  routerLink="./overview" routerLinkActive="active" >
+              <div class="d-flex w-100 ">
+                <i class=" fas fa-regular fa-user mx-1" ></i>
+                <h5 class="mb-1">My Jumia Account</h5>
+
+              </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action" routerLink="./order" routerLinkActive="active" >
+              <div class="d-flex w-100 ">
+                <i class="fas fa-regular fa-store mx-1"></i>
+                <h5 class="mb-1">Orders</h5>
+
+              </div>
+            </a>
+
+
+            <a href="#" class="list-group-item list-group-item-action" routerLink="./save" routerLinkActive="active">
+              <div class="d-flex w-100 ">
+                <i class="fas fa-heart mx-1"></i>
+                <h5 class="mb-1">Saved Items</h5>
+
+              </div>
+
+            </a>
+
+            <a href="#" class="list-group-item list-group-item-action"  routerLink="./view" routerLinkActive="active">
+              <div class="d-flex w-100 ">
+                <i class="fas fa-wallet mx-1"></i>
+                <h5 class="mb-1">Recently Viewed</h5>
+
+              </div>
+
+            </a>
+            <hr>
+            <a href="#" class="list-group-item list-group-item-action">
+            Details
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+            Address Book
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+           Change Password
+            </a>
+            <hr>
+            <button (click)="logOut()" class="btn btn-warning text-white">LOGOUT</button>
+          </div>
+
+        </div>
+
+
+     <div class="col-md-8 mx-2 card p-2">
+
+      <router-outlet></router-outlet>
+     </div>
+      </div>
+    </div>
+  </div>
+</section>
