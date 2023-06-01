@@ -1,3 +1,12 @@
 .detailes{
     max-width: 50%;
 }
+.btn-warning:hover{
+    color: white;
+}
+.remove{
+cursor: pointer;
+}
+.remove:hover{
+    color: black;
+}

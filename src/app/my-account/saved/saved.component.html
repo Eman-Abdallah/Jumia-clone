@@ -1,5 +1,5 @@
 <div class="col-md-12 p-2">
-  <h3>Saved Items (8)</h3>
+  <h3>Saved Items ({{SavedProducts.length}})</h3>
   <hr>
 
 <div class="col-md-12 card my-2 p-3" *ngFor="let product of SavedProducts">
@@ -15,8 +15,8 @@
         <span class="text-warning p-1" style=" background-color: rgb(255, 243, 227);">- {{product.sale}}%</span>
     </div>
     <div class="mx-2 d-flex align-items-center">
-      <button class="btn btn-warning  me-2">Buy Now</button>
-      <a class="text-warning ">
+      <button class="btn btn-warning  me-2" (click)="buy(product)">Buy Now</button>
+      <a class="text-warning remove" (click)="remove(product)">
         Remove</a>
     </div>
 

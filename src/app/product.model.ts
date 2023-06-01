@@ -11,7 +11,8 @@ export class Product{
    public progress :number,
    public isFlashSale:boolean,
    public isMothDay :boolean,
-   public top:boolean ){
+   public top:boolean ,
+   public liked=false){
 
   }
 }

@@ -1,3 +1,4 @@
+import { ProductService } from 'src/app/product.service';
 import { Product } from './../../product.model';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class SavedComponent implements OnInit {
   SavedProducts:Product[]=[]
   nomber!: number;
-  constructor() { }
+  constructor(private productService:ProductService) { }
 
   ngOnInit(): void {
 
@@ -25,5 +26,10 @@ if(!n){
   return
 }this.nomber= JSON.parse(n)
   }
-
+  buy(product:Product){
+this.productService.addProductToCart(product)
+  }
+  remove(product:Product){
+this.productService.removeProductFromSave(product)
+  }
 }

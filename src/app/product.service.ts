@@ -60,6 +60,7 @@ export class ProductService  {
 
 
 savedProduct:Product[]=[]
+uniqueSavedProduct:Product[]=[]
 cartProduct:Product[]=[]
 viewedProduct:Product[]=[]
 productsSaved = new Subject<Product[]>()
@@ -68,6 +69,14 @@ productsSaved = new Subject<Product[]>()
 
   addProductToSave(product:Product){
     this.savedProduct.push(product)
+    this.uniqueSavedProduct = [...new Set (this.savedProduct)];
+    console.log(this.uniqueSavedProduct);
+    
+    localStorage.setItem('savedItems',JSON.stringify(this.uniqueSavedProduct))
+  }
+  removeProductFromSave(product:Product){
+    const index =  this.savedProduct.indexOf(product); 
+    this.savedProduct.splice(index, 1);
     localStorage.setItem('savedItems',JSON.stringify(this.savedProduct))
   }
 
@@ -88,11 +97,9 @@ productsSaved = new Subject<Product[]>()
   getProduct(){
     return this.products.slice()
   }
-  delete(index:number){
+  removeProductFromCart(product:Product){
+    const index =  this.cartProduct.indexOf(product); 
     this.cartProduct.splice(index,1)
-console.log(this.cartProduct);
-
-
-
+    localStorage.setItem('cartItems',JSON.stringify(this.cartProduct))
       }
 }

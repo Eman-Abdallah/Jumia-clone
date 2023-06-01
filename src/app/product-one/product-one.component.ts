@@ -13,7 +13,7 @@ import { AuthService } from '../account/auth.service';
 export class ProductOneComponent implements OnInit {
   isAuthenticated=false
   product!: Product;
-  clicked=false
+  clicked!:boolean ;
   id!: number;
   userSub: Subscription = new Subscription;
   constructor(private productService:ProductService,
@@ -26,6 +26,7 @@ this.routes.params.subscribe(
   (param:Params)=>{
 this.id = +param['id']
 this.product=this.productService.getId(this.id)
+this.clicked = this.product.liked;
   }
 )
 this.userSub= this.authService.subject.subscribe(user=>{
@@ -38,10 +39,17 @@ this.isAuthenticated=false
 })}
 save(){
   if(this.isAuthenticated){
-    this.productService.addProductToSave(this.product)
-    this.clicked=true
-    console.log(this.productService.savedProduct)
 
+
+    this.clicked=!this.clicked
+    this.product.liked=!this.product.liked;
+    console.log(this.product.liked);
+if(this.product.liked){
+  this.productService.addProductToSave(this.product)
+}else{
+  this.productService.removeProductFromSave(this.product)
+  this.product
+}
   }else{
 this.router.navigate(['/sign'])
   }

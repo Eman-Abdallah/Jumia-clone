@@ -26,12 +26,11 @@ export class CartComponent implements OnInit , OnDestroy {
 topProducts:Product[]=[]
   ngOnInit(): void {
     this.topProducts=this.productService.topProduct
-    this.subscribion= this.productService.productsSaved.subscribe((product:Product[])=>{
-      this.cartProducts=product})
+    // this.subscribion= this.productService.productsSaved.subscribe((product:Product[])=>{
+    //   this.cartProducts=product})
 
 const saved=localStorage.getItem('savedItems')
-const cartItems =JSON.parse(localStorage.getItem('cartItems')??"")
-
+const cartItems =localStorage.getItem('cartItems')
 
 if(!saved ){
  return
@@ -43,19 +42,14 @@ this.number= this.SavedProducts.length
 if(!cartItems ){
   return
  }
- this.cartProducts = this.productService.cartProduct
- this.cortNumber= this.cartProducts .length
- console.log( this.cartProducts);
- console.log( this.cartProducts.length);
-
+ this.cartProducts = JSON.parse(cartItems);
+ this.cortNumber= this.cartProducts.length
   }
 ngOnDestroy(): void {
     this.subscribion.unsubscribe()
 }
 
-remove(index:number){
-this.productService.delete(index)
-this.cortNumber= this.cartProducts .length
-
-  }
+remove(product:Product){
+  this.productService.removeProductFromCart(product)
+    }
 }
