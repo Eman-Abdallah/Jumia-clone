@@ -3,19 +3,19 @@
   <hr>
 
 <div class="col-md-12 card my-2 p-3" *ngFor="let product of SavedProducts">
-  <div class="d-flex">
+  <div class="d-flex justify-content-between align-items-center">
     <div class="mx-2">
       <img src={{product.imagePath}} height="70px" alt="">
 
     </div>
-    <div>
+    <div class="detailes">
       <p>{{product.name}}</p>
       <p>EGP{{product.price-(product.price*product.sale/100)}}.00 </p>
      <span style="text-decoration: line-through;">EGP{{product.price}}.00</span>
         <span class="text-warning p-1" style=" background-color: rgb(255, 243, 227);">- {{product.sale}}%</span>
     </div>
-    <div class="mx-2">
-      <button class="btn btn-warning mb-4">Buy Now</button>
+    <div class="mx-2 d-flex align-items-center">
+      <button class="btn btn-warning  me-2">Buy Now</button>
       <a class="text-warning ">
         Remove</a>
     </div>

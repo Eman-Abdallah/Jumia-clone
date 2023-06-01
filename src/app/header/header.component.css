@@ -16,6 +16,12 @@ nav input{
   width: 600px;
 }
 
+@media (max-width: 1200px) {
+  nav input{
+  width: 371px !important;
+}
+
+ }
 @media (min-width: 576px) {
   nav li{
     text-align: center;
