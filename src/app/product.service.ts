@@ -1,5 +1,6 @@
 import { Product } from './product.model';
 import { Injectable, OnInit } from '@angular/core';
+
 import { Subject } from 'rxjs';
 
 
@@ -78,6 +79,11 @@ productsSaved = new Subject<Product[]>()
     const index =  this.savedProduct.indexOf(product); 
     this.savedProduct.splice(index, 1);
     localStorage.setItem('savedItems',JSON.stringify(this.savedProduct))
+    console.log(product.liked);
+    
+    product.liked = false;
+    console.log(product.liked);
+
   }
 
   addProductToCart(product:Product){

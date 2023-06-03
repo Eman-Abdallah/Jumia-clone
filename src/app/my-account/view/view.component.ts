@@ -32,5 +32,7 @@ if(!n){
   }
   remove(product:Product){
     this.productService.removeProductFromViewed(product)
+    this.viewedItems.splice(this.viewedItems.indexOf(product), 1)
   }
+  
 }

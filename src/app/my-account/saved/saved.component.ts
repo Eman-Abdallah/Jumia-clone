@@ -31,5 +31,6 @@ this.productService.addProductToCart(product)
   }
   remove(product:Product){
 this.productService.removeProductFromSave(product)
+this.SavedProducts.splice(this.SavedProducts.indexOf(product), 1)
   }
 }
