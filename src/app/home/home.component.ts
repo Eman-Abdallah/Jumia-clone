@@ -41,9 +41,9 @@ this.topProduct=this.productService.topProduct
   onClick(){
     this.isClicked=true
   }
-  viewed(){
+  viewed(product:Product){
 
-    this.productService.addToViewed(this.product)
+    this.productService.addToViewed(product)
 
   console.log(this.product);
 

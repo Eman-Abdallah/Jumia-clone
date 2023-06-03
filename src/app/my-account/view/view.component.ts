@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/product.model';
+import { ProductService } from 'src/app/product.service';
 @Component({
   selector: 'app-view',
   templateUrl: './view.component.html',
@@ -9,7 +10,7 @@ export class ViewComponent implements OnInit {
 
   viewedItems:Product[]=[]
   nomber!: number;
-  constructor() { }
+  constructor(private productService:ProductService) { }
 
   ngOnInit(): void {
 
@@ -26,5 +27,10 @@ if(!n){
 }this.nomber= JSON.parse(n)
   }
 
-
+  buy(product:Product){
+    this.productService.addProductToCart(product)
+  }
+  remove(product:Product){
+    this.productService.removeProductFromViewed(product)
+  }
 }

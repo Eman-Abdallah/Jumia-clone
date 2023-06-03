@@ -10,3 +10,7 @@ cursor: pointer;
 .remove:hover{
     color: black;
 }
+.sale{
+    font-size: 0.6rem;
+    color:rgba(0, 0, 0, 0.4) ;
+  }

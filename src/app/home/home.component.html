@@ -153,7 +153,7 @@
 
   >
     <a class="card" style="width: 13rem;"  [routerLink]="[flashSale.id-1]" routerLinkActive="active"
-    (click)="viewed()"   >
+    (click)="viewed(flashSale)"   >
         <img src={{flashSale.imagePath}} style="height: 200px;" class="card-img-top" alt="...">
         <div class="card-body px-3">
 
@@ -216,7 +216,7 @@
   <div class="col-md-6 col-lg-4 col-xl-2" *ngFor="let motherDayP of mDaySaleProduct ; let i=index"
   product= "motherDayP"
  >
-  <a class="card" style="width: 13rem;" [routerLink]="[motherDayP.id-1]" routerLinkActive="active"routerLinkActive="active">
+  <a class="card" style="width: 13rem;" [routerLink]="[motherDayP.id-1]" routerLinkActive="active"routerLinkActive="active" (click)="viewed(motherDayP)">
     <img src={{motherDayP.imagePath}} style="height: 200px;" class="card-img-top" alt="...">
     <div class="card-body px-3">
       <h5 class="card-title "> {{motherDayP.name}}</h5>
@@ -275,7 +275,7 @@
       <div class="col-md-6 col-lg-4 col-xl-2" *ngFor="let bProduct of baeutyProduct;let i=index"
       product= "bProduct"
    >
-      <a class="card" style="width: 13rem;" routerLink="/{{bProduct.id-1}}" routerLinkActive="active"routerLinkActive="active">
+      <a class="card" style="width: 13rem;" routerLink="/{{bProduct.id-1}}" routerLinkActive="active"routerLinkActive="active" (click)="viewed(bProduct)">
         <img src={{bProduct.imagePath}} style="height: 200px;" class="card-img-top" alt="...">
 
         <div class="card-body px-3">
@@ -433,7 +433,7 @@
         <div class="col-md-6 col-lg-4 col-xl-2" *ngFor="let topProduct of topProduct;let i=index"
         product= "bProduct"
      >
-        <a class="card" style="width: 10rem;" [routerLink]="[topProduct.id-1]" routerLinkActive="active"routerLinkActive="active">
+        <a class="card" style="width: 10rem;" [routerLink]="[topProduct.id-1]" routerLinkActive="active"routerLinkActive="active" (click)="viewed(topProduct)">
           <img src={{topProduct.imagePath}} style="height: 200px;" class="card-img-top" alt="...">
 
           <div class="card-body px-3">

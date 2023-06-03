@@ -102,4 +102,9 @@ productsSaved = new Subject<Product[]>()
     this.cartProduct.splice(index,1)
     localStorage.setItem('cartItems',JSON.stringify(this.cartProduct))
       }
+      removeProductFromViewed(product:Product){
+    const index =  this.viewedProduct.indexOf(product); 
+    this.viewedProduct.splice(index,1)
+    localStorage.setItem('viewedItems',JSON.stringify(this.viewedProduct))
+      }
 }

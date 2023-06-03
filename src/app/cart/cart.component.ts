@@ -22,6 +22,7 @@ export class CartComponent implements OnInit , OnDestroy {
     cortNumber=0
   SavedProducts:Product[]=[]
   cartProducts:Product[]=[]
+  viewedProducts:Product[]=[]
 
 topProducts:Product[]=[]
   ngOnInit(): void {
@@ -31,6 +32,7 @@ topProducts:Product[]=[]
 
 const saved=localStorage.getItem('savedItems')
 const cartItems =localStorage.getItem('cartItems')
+const viewed =localStorage.getItem('viewedItems')
 
 if(!saved ){
  return
@@ -44,6 +46,10 @@ if(!cartItems ){
  }
  this.cartProducts = JSON.parse(cartItems);
  this.cortNumber= this.cartProducts.length
+ if(!viewed){
+return
+ }
+ this.viewedProducts= JSON.parse(viewed)
   }
 ngOnDestroy(): void {
     this.subscribion.unsubscribe()

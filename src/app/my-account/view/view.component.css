@@ -1,0 +1,20 @@
+.sale{
+    font-size: 0.6rem;
+    color:rgba(0, 0, 0, 0.4) ;
+  }
+  .detailes{
+    max-width: 50%;
+}
+.btn-warning:hover{
+    color: white;
+}
+.remove{
+cursor: pointer;
+}
+.remove:hover{
+    color: black;
+}
+.sale{
+    font-size: 0.6rem;
+    color:rgba(0, 0, 0, 0.4) ;
+  }
