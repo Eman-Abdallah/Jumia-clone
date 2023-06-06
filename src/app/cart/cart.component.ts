@@ -58,5 +58,6 @@ ngOnDestroy(): void {
 remove(product:Product){
   this.productService.removeProductFromCart(product)
   this.cartProducts.splice(this.cartProducts.indexOf(product), 1)
+  this.cortNumber=this.cortNumber-1
     }
 }

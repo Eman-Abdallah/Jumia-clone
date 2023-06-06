@@ -29,7 +29,7 @@ let authObserv: Observable<AuthResponse>
 authObserv= this.authService.login(email,password)
 authObserv.subscribe(
  resData=>{
- this.router.navigate(['/my-account'])
+ this.router.navigate(['/my-account/overview'])
  this.isLogged=true
     },
     errorMessage=>{

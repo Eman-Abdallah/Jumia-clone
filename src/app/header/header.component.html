@@ -41,14 +41,17 @@
               </a>
 
 
-              <a ngbDropdownItem *ngIf="isAuthenticated" routerLink="my-account" routerLinkActive="active"   >
-                <i class=" fas fa-regular fa-user mr-3" ></i>
+              <a ngbDropdownItem *ngIf="isAuthenticated" routerLink="my-account/overview" routerLinkActive="active"   >
+                <i class=" far fa-regular fa-user me-3" ></i>
                 My Account</a>
+              <a ngbDropdownItem *ngIf="isAuthenticated" routerLink="my-account/inbox" routerLinkActive="active"   >
+                <i class=" far fa-regular fa-envelope me-3" ></i>
+                Inbox</a>
               <a ngbDropdownItem *ngIf="isAuthenticated"  routerLink="my-account/order" routerLinkActive="active"  >
-                <i class="fas fa-regular fa-store mr-3"></i>
+                <i class="far fa-regular fa-store me-3"></i>
                Orders</a>
               <button ngbDropdownItem *ngIf="isAuthenticated"  routerLink="my-account/save" routerLinkActive="active" >
-                <i class=" fas fa-regular fa-heart mr-3 "></i>
+                <i class=" far fa-regular fa-heart me-3 "></i>
                 saved Items</button>
              
             </div>

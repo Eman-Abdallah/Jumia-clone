@@ -13,3 +13,6 @@ cursor: pointer;
 .remove:hover{
   color: black;
 }
+.list-group-item{
+  padding: 20px !important;
+}

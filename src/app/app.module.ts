@@ -35,6 +35,9 @@ import { SavedComponent } from './my-account/saved/saved.component';
 import { ViewComponent } from './my-account/view/view.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { EditAddressComponent } from './my-account/edit-address/edit-address.component';
+import { InboxComponent } from './my-account/inbox/inbox.component';
+import { VoucherComponent } from './my-account/voucher/voucher.component';
 
 
 @NgModule({
@@ -67,6 +70,9 @@ import { HttpClientModule } from '@angular/common/http';
     OverwiewComponent,
     SavedComponent,
     ViewComponent,
+    EditAddressComponent,
+    InboxComponent,
+    VoucherComponent,
 
 
 

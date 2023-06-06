@@ -25,6 +25,9 @@ import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GameComponent } from './shop/game/game.component';
 import { ResolverService } from './resolver.service';
+import { EditAddressComponent } from './my-account/edit-address/edit-address.component';
+import { InboxComponent } from './my-account/inbox/inbox.component';
+import { VoucherComponent } from './my-account/voucher/voucher.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent, children:
@@ -47,19 +50,23 @@ const routes: Routes = [
 {
   path:'sign',component:SignInComponent
 },
-{
-  path:'home',component:HomeComponent
-},
+
 {
   path:'account',component:AccountComponent}
   ,{path:'my-account',component:MyAccountComponent,children:[
   {path:'overview',component:OverwiewComponent},
   {path:'order',component:OrderComponent},
+  {path:'inbox',component:InboxComponent},
   {path:'save',component:SavedComponent},
-  {path:'view',component:ViewComponent}
+  {path:'voucher',component:VoucherComponent},
+  {path:'view',component:ViewComponent},
+  {path:'edit-address',component:EditAddressComponent},
 ]},
-{path:'contact',component:ContactUsComponent},{path:'cart',component:CartComponent},
+{path:'contact',component:ContactUsComponent},
+{path:'cart',component:CartComponent},
+{path:'help',component:HelpComponent},
 {path:':id',component:ProductOneComponent,resolve:[ResolverService]},
+
 
 ];
 

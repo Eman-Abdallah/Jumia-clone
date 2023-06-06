@@ -1,8 +1,28 @@
-<div class="col-md-12 p-2">
+
   <h3>Recently Viewed</h3>
   <hr>
+<div class="col-md-12" *ngIf="viewedItems.length===0">
+  <div class="row justify-content-center">
+    <div class="col-md-2  mt-5">
+      <img src="../../../assets/image/binoculars.389fc56a.svg" class="img-fluid" alt="">
+  
+  
+    </div>
+  </div>
+  <div class="row justify-content-center ">
+    <div class="col-md-8 ">
+    <p class="text-center mt-3">No Recently Viewed Products</p>
+    <p class="text-center ">You have no recently viewed products at the moment.</p>
+    <div class="d-grid">
+      <a class="btn btn-warning text-center" style="margin: auto;"  routerLink=""> Continue Shopping</a>
+           </div>
+         </div>
+  
+        </div>
+</div>
 
-<div class="col-md-12 card my-2 p-3" *ngFor="let product of viewedItems">
+<div class="col-md-12 px-2" *ngIf="viewedItems.length>0">
+<div class=" card my-2 p-3" *ngFor="let product of viewedItems">
   <div class="d-flex justify-content-between align-items-center">
     <div class="mx-2">
       <img src={{product.imagePath}} height="70px" alt="">
@@ -22,5 +42,5 @@
 
   </div>
 </div>
-
-      </div>
+</div>
+     

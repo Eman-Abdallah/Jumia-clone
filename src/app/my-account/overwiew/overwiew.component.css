@@ -1,0 +1,24 @@
+h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding: 21px 10px 10px 10px;
+}
+.card{
+    min-height: 184px;
+}
+.card-title{
+    font-size: 16px;
+    font-weight: 600;
+}
+.card-text{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.btn.text-warning:hover{
+    color: black;
+}
+.address{
+    font-size: 12px;
+}

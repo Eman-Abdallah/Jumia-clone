@@ -10,7 +10,7 @@ border: 1px solid rgb(151, 150, 150);
 .card {
   border: none !important;
 
-
+padding: 10px;
   background: #fff;
 
   transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
@@ -23,4 +23,36 @@ border: 1px solid rgb(151, 150, 150);
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+.search-container{
+  position: relative;
+}
+.search{
+  border-radius: 20px !important;
+  padding: 10px !important;
+  padding-left: 32px !important;
+
+}
+.search-container i{
+  position: absolute;
+  top: 14px;
+    left: 8px;
+    color: rgba(0, 0, 0, 0.6);
+}
+.learn{
+  border-radius: 20px !important;
+  color: #ffc107 !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px
+}
+.learn:hover{
+  background-color: #ffc107 !important;
+  color: #fff !important;
+}
+.text-black{
+  font-size: 13px;
+    font-weight: bold;
+    padding: 10px 0;
 }

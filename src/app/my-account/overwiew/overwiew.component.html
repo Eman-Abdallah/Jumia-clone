@@ -1,6 +1,6 @@
-<h3>Account Overview</h3>
+<h3 >Account Overview</h3>
 <hr>
-<div class="row">
+<div class="row px-2">
   <div class="col-md-6">
     <div class="card">
       <div class="card-header">
@@ -8,37 +8,30 @@
       </div>
       <div class="card-body">
         <h5 class="card-title">{{fName}} {{lName}}</h5>
-        <p class="card-text">{{email}}</p>
-        <a href="#" class="btn btn-warning text-white">Change Password</a>
+        <p class="card-text text-black-50">{{email}}</p>
       </div>
     </div>
   </div>
   <div class="col-md-6">
     <div class="card">
-      <div class="card-header">
+      <div class="card-header d-flex justify-content-between">
         ADDRESS BOOK
+        <a routerLink="../edit-address" routerLinkActive="active">  <i class="fas fa-pen text-warning"></i></a>
+       
       </div>
       <div class="card-body">
         <h5 class="card-title">Your default shipping address:</h5>
-        <p class="card-text">No default shipping address available.</p>
-        <a href="#" class="btn btn-warning text-white">Add Default Address</a>
+        <p class="card-text text-black-50" *ngIf="!gotAddress">No default shipping address available.</p>
+        <a routerLink="../edit-address" *ngIf="!gotAddress" routerLinkActive="active" class="btn text-warning mt-1">Add Default Address</a>
+        <p class="card-text text-black-50 address">{{fName}} {{lName}}</p>
+        <p class="card-text text-black-50 address">{{address}}</p>
+        <p class="card-text text-black-50 address">{{city}} , {{region}}</p>
+        <p class="card-text text-black-50 address">+20 {{phone}}</p>
       </div>
     </div>
   </div>
 </div>
-<div class="row my-2">
-  <div class="col-md-6">
-    <div class="card">
-      <div class="card-header">
-        JUMIA PRIMO
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">JUMIA PRIMO</h5>
-        <p class="card-text">Jumia Primo is a loyalty program which offers members free delivery on all Jumia Items (excluding Jumia Global) and Jumia Food orders, plus exclusive access to promotions & deals.</p>
-        <a href="#" class="btn btn-warning text-white ">Subscribe Jumia Primo</a>
-      </div>
-    </div>
-  </div>
+<div class="row my-2 px-2">
   <div class="col-md-6">
     <div class="card">
       <div class="card-header">
@@ -51,4 +44,17 @@
       </div>
     </div>
   </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        JUMIA PRIMO
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">NEWSLETTER PREFERENCES</h5>
+        <p class="card-text text-black-50">You are currently not subscribed to any of our newsletters.</p>
+        <a href="#" class="btn text-warning  ">Subscribe Jumia Primo</a>
+      </div>
+    </div>
+  </div>
+
 </div>
